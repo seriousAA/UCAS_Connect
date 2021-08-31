@@ -17,8 +17,10 @@
 -   将auto_connect.py下载下来，放到一个非root权限就可以访问到的地方
     
 -   通过以下命令查看chrome版本，(如果没有chrome就去官网安装一个最新版的)
-    
+
+    ```shell    
     google-chrome -version或者chrome -version
+    ```
     
     如下图所示
     
@@ -54,11 +56,14 @@
     ![]()
     
     在rc.local文件中插入如下命令：
-    
+    ```shell 
     nohup python -u {脚本的绝对路径} > {Log输出文件的绝对路径} 2>&1 &
+    ```
     
     为了保险起见，可以先在终端运行以下命令测试脚本功能是否正常，然后再修改rc.local文件
     
+    ```shell 
     python -u {脚本的绝对路径} > {Log输出文件的绝对路径} 2>&1 &
+    ```
     
 -   修改完rc.local文件后，重启电脑即可生效。如果后续脚本功能没有达到预期效果，可以查看Log输出文件，查看脚本运行情况
