@@ -8,7 +8,9 @@
 
 -   开机之后打开终端，如果没有安装selenium，直接
     
-    'pip install selenium'
+    '''shell
+    pip install selenium
+    '''
     
     安装selenium
     
