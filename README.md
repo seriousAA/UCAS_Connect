@@ -53,7 +53,7 @@
     
     在/etc/目录下搜索找到rc.local文件，里面的内容应该是与下图类似：
     
-    ![rc.local](resources/rc.png)
+    ![rc.local](resources/rclocal.png)
     
     在rc.local文件中插入如下命令：
     ```shell 
