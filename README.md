@@ -24,7 +24,7 @@
     
     如下图所示
     
-    ![]()
+    ![查看谷歌浏览器版本](./resources/chorme-version.png)
     
 -   根据chrome浏览器版本，在[网址1](https://sites.google.com/chromium.org/driver/downloads) 或者[网址2](https://npm.taobao.org/mirrors/chromedriver/) 下载对应版本的ChromeDriver，和auto_connect.py放到同一目录下(不是必须，但最好这样)
     
