@@ -6,8 +6,6 @@ import threading
 username='202028009029004' # modify it
 password='**********' # modify it
 driver_path='/mnt/Research/Sele/chromedriver' # modify it, must use absolute path
-record_path='/mnt/Research/Sele/out.log' # modify it, must use absolute path
-
 global timer
 
 def check_connection():
