@@ -9,19 +9,8 @@ driver_path='/mnt/Research/Sele/chromedriver' # modify it, must use absolute pat
 record_path='/mnt/Research/Sele/out.log' # modify it, must use absolute path
 
 global timer
-global cnt
-
-def erase_record():
-    f = open(record_path, 'r+')
-    f.seek(0)
-    f.truncate()
 
 def check_connection():
-    global cnt
-    cnt+=1
-    if cnt>50000:
-        erase_record()
-        cnt=0
     chrome_options = Options()
     chrome_options.add_argument('--headless')
     chrome_options.add_argument('--disable-gpu')
@@ -52,13 +41,12 @@ def check_connection():
 
         client.quit()
         global timer
-        timer = threading.Timer(60, check_connection)  # every 60s check the connection
+        timer = threading.Timer(5, check_connection)  # every 60s check the connection
         timer.start()
     except Exception as e:
         print(e)
-        timer = threading.Timer(10, check_connection)  # every 60s check the connection
+        timer = threading.Timer(5, check_connection)  # every 60s check the connection
         timer.start()
 
 if __name__ == '__main__':
-    cnt=0
     check_connection()
